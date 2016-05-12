@@ -1,0 +1,16 @@
+<% if signed_in? %>
+  <h1>Let's Meetup in Space</h2>
+
+    <p>Find a meetup by name, location, or description:</p>
+    <form action="/search" method="post">
+      <p><input type="text" name="name" size="30" maxlength="50" placeholder="Name of event"></p>
+      <p><input type="text" name="description" size="30" maxlength="50" placeholder="Description"></p>
+      <p><input type="text" name="location" size="30" maxlength="50" placeholder="Location"></p>
+      <p><input type="submit" value="Search"></p>
+    </form>
+
+<% else %>
+
+  <h1>Please Sign In</h1>
+
+<% end %>
